@@ -16,9 +16,6 @@ option(VECTORIZE_COMPUTATIONS "Explicit vectorization of the computation (defaul
 if(VECTORIZE_COMPUTATIONS)
 	add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-DVECTORIZE_COMPUTATIONS>)
 	option(EIGEN_VECTORIZATION "Use Eigen as the vectorization engine (default ON)" ON)
-	if (EIGEN_VECTORIZATION)
-		add_compile_options($<$<COMPILE_LANGUAGE:CXX>:-DEIGEN_VECTORIZATION>)
-	endif(EIGEN_VECTORIZATION)
 endif(VECTORIZE_COMPUTATIONS)
 
 
