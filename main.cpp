@@ -66,11 +66,6 @@ namespace L2S
 		inline auto & operator()(const int i, const int j, const int k)
 		{
 			
-			std::cout << " vector vexcl size(data(i,j)) = " << data_(i, j).size() << std::endl;
-			auto & dij = data_(i, j);
-			std::cout << " vector vexcl size(dij) = " << dij.size() << std::endl;
-			std::cout << " vector vexcl size data = " << data_.size() << std::endl;
-			
 			return data_(i, j)[k];
 		}
 
