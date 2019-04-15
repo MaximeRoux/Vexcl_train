@@ -15,7 +15,6 @@ using RealType = float;
 
 typedef vex::vector<RealType> SpatialBlockField1D;
 
-
 const vex::Context& ctx() {
 	static vex::Context ctx(vex::Filter::GPU);
 	return ctx;
@@ -116,12 +115,11 @@ namespace L2S
 int main(void)
 {
 
-	printf("EIGEN 1D \n");
 	SpatialBlockField1D m(ctx(), 2);
 
 	for (auto i = 0; i < m.size(); i++) {
 		m[i] = i + 1;
-		std::cout << "m(" << i << ") = " << m[i] << '\n';
+		std::cout << "m[" << i << "] = " << m[i] << '\n';
 
 	}
 
